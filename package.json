@@ -1,0 +1,26 @@
+{
+  "name": "zenix",
+  "version": "1.0.0",
+  "description": "Planilhas",
+  "main": "bin/server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node bin/server.js"
+  },
+  "keywords": [
+    "planilha",
+    "zenix"
+  ],
+  "author": "Felipe Alves Garcia",
+  "license": "ISC",
+  "dependencies": {
+    "body-parser": "^1.20.3",
+    "connect-flash": "^0.1.1",
+    "express": "^4.21.2",
+    "express-handlebars": "^8.0.1",
+    "express-session": "^1.18.1",
+    "handlebars": "^4.7.8",
+    "mysql2": "^3.12.0",
+    "path": "^0.12.7"
+  }
+}
