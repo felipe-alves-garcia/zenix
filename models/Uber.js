@@ -11,7 +11,7 @@ const UberSchema = new Schema({
     carro:{type:Number, require:true},
     despesa:{type:Number, require:true},
     lucro:{type:Number, require:true},
-    data:{type:Date, require:true}
+    data:{type:Number, require:true}
 })
 
 const Uber = mongoose.model("Uber", UberSchema);

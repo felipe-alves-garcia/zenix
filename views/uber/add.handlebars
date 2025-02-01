@@ -1,20 +1,25 @@
 <div class="container mt-5">
     <div class="row">
         <div class="col-12">
-            <h2>Adicionar Registro: </h2>
-            <hr>
+            <h2 class="m-0">Adicionar Registro: </h2>
+            <hr style="border:2px #212529 solid; opacity:1; border-radius:100px" class="my-2 mb-4">
             <form action="/uber/add/post" method="POST">
-                <label for="ganho">Ganho</label>
-                <input type="number" step="any" name="ganho" placeholder="R$0,00">
-                <label for="kmi">Km início</label>
-                <input type="number" step="any" name="kmi" placeholder="0">
-                <label for="kmf">Km final</label>
-                <input type="number" step="any" name="kmf" placeholder="0">
-                <label for="gasolina">Gasolina/L</label>
-                <input type="number" step="any" name="gasolina" placeholder="R$0,00">
-                <label for="carro">Carro (Km/L)</label>
-                <input type="number" step="any" name="carro" placeholder="0 Km/L">
-                <button id="botaoAdd" type="submit">Adicionar</button>
+                <label for="ganho" id="labelUber">Ganho</label>
+                <input type="number" step="any" name="ganho" placeholder="R$0,00" id="inputUber">
+                <label for="kmi" id="labelUber">Km início</label>
+                <input type="number" step="any" name="kmi" placeholder="0 Km" id="inputUber">
+                <label for="kmf" id="labelUber">Km final</label>
+                <input type="number" step="any" name="kmf" placeholder="0 Km" id="inputUber">
+                <label for="gasolina" id="labelUber">Gasolina/L</label>
+                <input type="number" step="any" name="gasolina" placeholder="R$0,00" id="inputUber">
+                <label for="carro id="labelUber"">Carro (Km/L)</label>
+                <input type="number" step="any" name="carro" placeholder="0 Km/L" id="inputUber">
+                <div class="d-flex justify-content-center">
+                    <button id="botaoFormUber" type="submit" class="mb-5 mt-3 px-5 py-2">
+                        <i class="bi bi-plus-square pe-2"></i>
+                        Adicionar
+                    </button>
+                </div>
             </form>
         </div>
     </div>

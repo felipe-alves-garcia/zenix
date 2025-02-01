@@ -10,6 +10,6 @@
 #aNav > p{
     margin:0;
 }
-#aNav > div:hover{
+#aNav:hover{
     opacity: 0.8;   
 }

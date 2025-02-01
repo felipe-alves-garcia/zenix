@@ -20,7 +20,7 @@ const session = require("express-session");
     app.use(flash());
     //Middlewares
     app.use((req, res, next) => {
-        res.locals.ids = 0;
+        
         next();
     });
     //Handlebars

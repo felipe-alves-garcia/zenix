@@ -4,7 +4,6 @@ const uber = require("../controllers/uberController")
 
 router.get("/", (req, res) => {
     uber.registros().then((resp) => {
-        console.log(resp);
         res.render("uber/home", {registros:resp});
     }).catch((erro) => {
         console.log("Erro ao listar registros --> " + erro);

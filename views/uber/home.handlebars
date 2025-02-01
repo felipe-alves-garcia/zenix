@@ -5,6 +5,7 @@
                 <thead class="bg bg-dark text-white">
                     <tr class="bt">
                         <th class="bt">ID</th>
+                        <th class="bt">Data</th>
                         <th class="bt py-1">Ganho</th>
                         <th class="bt">Km Início</th>
                         <th class="bt">Km Final</th>
@@ -13,13 +14,14 @@
                         <th class="bt">Carro</th>
                         <th class="bt">Despesa</th>
                         <th class="bt">Lucro</th>
-                        <th class="bt">Data</th>
+                        <th class="bt"></th>
                     </tr>
                 </thead>
                 <tbody>
                     {{#each registros}}
                     <tr class="bt">
-                        <td class="bt">-</td>
+                        <td class="bt">{{id}}</td>
+                        <td class="bt">{{data}}</td>
                         <td class="bt">R${{ganho}}</td>
                         <td class="bt">{{kmi}} Km</td>
                         <td class="bt">{{kmf}} Km</td>
@@ -28,7 +30,7 @@
                         <td class="bt">{{carro}} Km/L</td>
                         <td class="bt">R${{despesa}}</td>
                         <td class="bt">R${{lucro}}</td>
-                        <!--<td class="bt">{{data}}</td>-->
+                        <td class="bt"></td>
                     </tr>
                     {{else}}
                     <tr class="bt">
