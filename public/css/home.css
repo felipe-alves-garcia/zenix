@@ -1,0 +1,17 @@
+#card{
+    border-radius: 50px;
+    font-size: 2rem;
+    color:white;
+    transition: 200ms ease-in-out;
+    text-decoration: none;
+    min-height:18rem;
+    display: block;
+}
+#card > hr{
+    border:1.75px solid white;
+    opacity: 1;
+}
+#card:hover{
+    opacity: 0.9;
+    transform: scale(1.03);
+}

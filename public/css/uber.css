@@ -1,0 +1,27 @@
+/*Tabela*/
+
+#tabela{
+    text-align: center;
+}
+.bt{ /*borda tabela*/
+    border:#212529 1px solid;
+}
+
+/*Adicionar*/
+
+#adicionar{
+    color:white;
+    display: flex;
+    background-color: #212529;
+    text-decoration: none;
+    font-size: 1.2rem;
+    border-radius: 50px;
+    transition: 200ms ease-in-out;
+}
+#adicionar > p{
+    margin: 0;
+}
+#adicionar:hover{
+    opacity: 0.9;
+    transform: scale(0.98);
+}

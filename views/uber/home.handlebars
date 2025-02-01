@@ -1,0 +1,57 @@
+<div class="container mt-5">
+    <div class="row">
+        <div class="col-12">
+            <table class="w-100 bt" id="tabela">
+                <thead class="bg bg-dark text-white">
+                    <tr class="bt">
+                        <th class="bt">ID</th>
+                        <th class="bt py-1">Ganho</th>
+                        <th class="bt">Km Início</th>
+                        <th class="bt">Km Final</th>
+                        <th class="bt">Km Variação</th>
+                        <th class="bt">Gasolina/L</th>
+                        <th class="bt">Carro</th>
+                        <th class="bt">Despesa</th>
+                        <th class="bt">Lucro</th>
+                        <th class="bt">Data</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {{#each registros}}
+                    <tr class="bt">
+                        <td class="bt">-</td>
+                        <td class="bt">R${{ganho}}</td>
+                        <td class="bt">{{kmi}} Km</td>
+                        <td class="bt">{{kmf}} Km</td>
+                        <td class="bt">{{kmv}} Km</td>
+                        <td class="bt">R${{gasolina}}</td>
+                        <td class="bt">{{carro}} Km/L</td>
+                        <td class="bt">R${{despesa}}</td>
+                        <td class="bt">R${{lucro}}</td>
+                        <!--<td class="bt">{{data}}</td>-->
+                    </tr>
+                    {{else}}
+                    <tr class="bt">
+                        <td class="bt">-</td>
+                        <td class="bt">-</td>
+                        <td class="bt">-</td>
+                        <td class="bt">-</td>
+                        <td class="bt">-</td>
+                        <td class="bt">-</td>
+                        <td class="bt">-</td>
+                        <td class="bt">-</td>
+                        <td class="bt">-</td>
+                        <td class="bt">--/--/--</td>
+                    </tr>
+                    {{/each}}
+                </tbody>
+            </table>
+        </div>
+        <div class="col-12 d-flex justify-content-center mt-4">
+            <a href="/uber/add" id="adicionar" class="px-4 py-2">
+                <i class="bi bi-plus-square"></i>
+                <p class="ps-3">Adicionar</p>    
+            </a>
+        </div>
+    </div>
+</div>

@@ -1,11 +1,11 @@
-//-----Models-----//
 
+//-----||-----//
 const express = require("express");
 const app = express();
 const handlebars = require("express-handlebars");
 const { engine } = require("express-handlebars");
 const bodyParser = require("body-parser");
-const path = require("path");
+//const path = require("path");
 const flash = require("connect-flash");
 const session = require("express-session");
 
@@ -20,7 +20,7 @@ const session = require("express-session");
     app.use(flash());
     //Middlewares
     app.use((req, res, next) => {
-        
+        res.locals.ids = 0;
         next();
     });
     //Handlebars
@@ -30,13 +30,28 @@ const session = require("express-session");
     app.use(bodyParser.urlencoded({extended:true}));
     app.use(bodyParser.json());
     //public
-    app.use(express.static(path.join(__dirname, "public")));
+    app.use(express.static("public"));
+
+//-----DB-----//
+
+const db = require("./models/db");
+db.conexaoDB();
 
 //-----Rotas-----//
 
 app.get("/", (req, res) => {
-    res.send("home");
+    res.render("home");
 })
+
+//
+
+const uber = require("./routes/uber");
+app.use("/uber", uber);
+
+//
+
+const xgames = require("./routes/xgames");
+app.use("/xgames", xgames);
 
 //-----Exportação-----//
 

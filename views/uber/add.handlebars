@@ -1,0 +1,21 @@
+<div class="container mt-5">
+    <div class="row">
+        <div class="col-12">
+            <h2>Adicionar Registro: </h2>
+            <hr>
+            <form action="/uber/add/post" method="POST">
+                <label for="ganho">Ganho</label>
+                <input type="number" step="any" name="ganho" placeholder="R$0,00">
+                <label for="kmi">Km início</label>
+                <input type="number" step="any" name="kmi" placeholder="0">
+                <label for="kmf">Km final</label>
+                <input type="number" step="any" name="kmf" placeholder="0">
+                <label for="gasolina">Gasolina/L</label>
+                <input type="number" step="any" name="gasolina" placeholder="R$0,00">
+                <label for="carro">Carro (Km/L)</label>
+                <input type="number" step="any" name="carro" placeholder="0 Km/L">
+                <button id="botaoAdd" type="submit">Adicionar</button>
+            </form>
+        </div>
+    </div>
+</div>
