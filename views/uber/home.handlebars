@@ -1,5 +1,13 @@
 <div class="container mt-5">
     <div class="row">
+        <duv class="col-12">
+            <div id="data" class="d-flex justify-content-center mb-4">
+                <a href="/uber/data/false"><i class="bi bi-arrow-left-circle-fill"></i></a>
+                <h3>{{data.mes}}/{{data.ano}}</h3>
+                <a href="/uber/data/true"><i class="bi bi-arrow-right-circle-fill"></i></a>    
+            </div>
+            
+        </duv>
         <div class="col-12">
             <table class="w-100 bt" id="tabela">
                 <thead class="bg bg-dark text-white">
@@ -49,6 +57,36 @@
                     </tr>
                     {{/each}}
                 </tbody>
+                <tfoot>
+                    <tr class="bt">
+                        <td class="bt"></td>
+                        <td class="bt"></td>
+                        <td class="bt">R${{total.ganho}}</td>
+                        <td class="bt"></td>
+                        <td class="bt"></td>
+                        <td class="bt">{{total.kmv}} Km</td>
+                        <td class="bt"></td>
+                        <td class="bt"></td>
+                        <td class="bt">R${{total.despesa}}</td>
+                        <td class="bt">R${{total.lucro}}</td>
+                        <td class="bt"></td>
+                    </tr>
+                </tfoot>
+                <tfoot class="bg bg-dark text-white">
+                    <tr class="bt">
+                        <td class="bt"></td>
+                        <td class="bt"></td>
+                        <td class="bt">Total</td>
+                        <td class="bt"></td>
+                        <td class="bt"></td>
+                        <td class="bt">Total</td>
+                        <td class="bt"></td>
+                        <td class="bt"></td>
+                        <td class="bt">Total</td>
+                        <td class="bt">Total</td>
+                        <td class="bt"></td>
+                    </tr>
+                </tfoot>
             </table>
         </div>
         <div class="col-12 d-flex justify-content-center mt-4">

@@ -1,3 +1,22 @@
+/*Data*/
+
+#data > a{
+    font-size:1.5rem;
+    color:#212529;
+    text-decoration: none;
+    transition: 200ms ease-in-out;
+}
+#data > a:hover{
+    opacity: 0.8;
+}
+#data > h3{
+    font-size: 1.75rem;
+    color:#212529;
+    margin:0;
+    padding-left: 1.5rem;
+    padding-right:1.5rem;
+}
+
 /*Tabela*/
 
 #tabela{
@@ -48,6 +67,15 @@
     padding-left:1.5rem;
     padding-right:1.5rem;
     margin-bottom:1.25rem;
+}
+#dataInput{
+    border-radius:100px;
+    border:rgba(33, 37, 41, 0.4) solid 1px;
+    padding:0.5rem;
+    padding-left:1.5rem;
+    padding-right:1.5rem;
+    margin-bottom:1.25rem;
+    width:33%;
 }
 #botaoFormUber{
     color:white;
