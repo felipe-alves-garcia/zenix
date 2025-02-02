@@ -6,6 +6,14 @@
 .bt{ /*borda tabela*/
     border:#212529 1px solid;
 }
+#editRegistro{
+    color:#212529;
+    transition: 200ms ease-in-out;
+    opacity: 0.8;
+}
+#editRegistro:hover{
+    opacity: 1;
+}
 
 /*Adicionar*/
 
@@ -52,5 +60,18 @@
     transition: 200ms ease-in-out;
 }
 #botaoFormUber:hover{
+    opacity: 0.9;
+}
+#botaoDeleteFormUber{
+    color:white;
+    background-color: red;
+    text-decoration: none;
+    outline: none;
+    border:none;
+    font-size: 1.2rem;
+    border-radius: 50px;
+    transition: 200ms ease-in-out;
+}
+#botaoDeleteFormUber:hover{
     opacity: 0.9;
 }
