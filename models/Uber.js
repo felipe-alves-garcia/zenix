@@ -33,4 +33,13 @@ const BackupUberSchema = new Schema({
 
 const BackupUber = mongoose.model("BackupUber", BackupUberSchema);
 
-module.exports = { Uber, BackupUber };
+//
+
+const DataSchema = new Schema({
+    mes:{type:Number, require:true, default:1},
+    ano:{type:Number, require:true, default:2025}
+})
+
+const Data = mongoose.model("data", DataSchema);
+
+module.exports = { Uber, BackupUber, Data };

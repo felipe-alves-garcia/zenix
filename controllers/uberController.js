@@ -1,48 +1,48 @@
 const { Uber } = require("../models/Uber");
 const { BackupUber } = require("../models/Uber");
-const { LocalStora, LocalStorage } = require("node-localstorage");
-const localStorage = new LocalStorage("./storage");
+const { Data } = require("../models/Uber");
 
-function getData (){
-    var data = JSON.parse(localStorage.getItem("data"));
-    if(!data){
-        data = {
-            ano:2025,
-            mes:1
-        }
-        localStorage.setItem("data", JSON.stringify(data));
-        return data;
+async function getData(){
+    var data = await Data.findOne().lean();
+    if(data == null){
+        data = new Data({
+            mes:1,
+            ano:2025
+        });
+        data.save().then((resp) => {
+            return data;
+        }).catch((erro) => {
+            console.log("Erro")
+        })
     }
     return data;
 }
 
-function dataUpdate (up){
-    var data;
+async function dataUpdate (up){
+    var data = await Data.findOne();
     if(up){
-        data = getData();
         if(data.mes == 12){
             data.mes = 1;
             data.ano++;
-            localStorage.setItem("data", JSON.stringify(data));
+            await data.save();
             return data;
         }
         else{
             data.mes++;
-            localStorage.setItem("data", JSON.stringify(data));
+            await data.save();
             return data;
         }
     }
     else{
-        data = getData();
         if(data.mes == 1){
             data.mes = 12;
             data.ano--;
-            localStorage.setItem("data", JSON.stringify(data));
+            await data.save();
             return data;
         }
         else{
             data.mes--;
-            localStorage.setItem("data", JSON.stringify(data));
+            await data.save();
             return data;
         }
     }

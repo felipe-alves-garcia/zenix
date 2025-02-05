@@ -12,11 +12,11 @@ const session = require("express-session");
 //-----Configurações-----//
 
     //session e flash
-    app.use(session({
+    /*app.use(session({
         secret:"zenix12321",
         resave:true,
         saveUninitialized:true,
-    }));
+    }));*/
     app.use(flash());
     //Middlewares
     app.use((req, res, next) => {
