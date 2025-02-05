@@ -3,7 +3,7 @@ const { BackupUber } = require("../models/Uber");
 const { Data } = require("../models/Uber");
 
 async function getData(){
-    /*var data = await Data.findOne().lean();
+    var data = await Data.findOne().lean();
     if(data == null){
         data = new Data({
             mes:1,
@@ -15,13 +15,11 @@ async function getData(){
             console.log("Erro")
         })
     }
-    return data;*/
-    return {mes:1, ano:2025}
+    return data;
 }
 
 async function dataUpdate (up){
-    //var data = await Data.findOne();
-    var data = {mes:1, ano:2025}
+    var data = await Data.findOne();
     if(up){
         if(data.mes == 12){
             data.mes = 1;
