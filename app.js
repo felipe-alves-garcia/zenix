@@ -20,7 +20,8 @@ const flash = require("connect-flash");
     app.use(flash());
     //Middlewares
     app.use((req, res, next) => {
-        
+        req.setTimeout(600000);
+        res.setTimeout(600000);
         next();
     });
     //Handlebars
