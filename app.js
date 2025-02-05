@@ -5,9 +5,9 @@ const app = express();
 const handlebars = require("express-handlebars");
 const { engine } = require("express-handlebars");
 const bodyParser = require("body-parser");
-//const path = require("path");
+const path = require("path");
 const flash = require("connect-flash");
-const session = require("express-session");
+//const session = require("express-session");
 
 //-----Configurações-----//
 
@@ -26,6 +26,7 @@ const session = require("express-session");
     //Handlebars
     app.engine("handlebars", engine({defaultLayout:"main"}));
     app.set("view engine", "handlebars");
+    app.set("views", path.join(__dirname, "views"));
     //Body-parser
     app.use(bodyParser.urlencoded({extended:true}));
     app.use(bodyParser.json());
