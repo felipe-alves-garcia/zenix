@@ -31,7 +31,7 @@ const flash = require("connect-flash");
     app.use(bodyParser.urlencoded({extended:true}));
     app.use(bodyParser.json());
     //public
-    app.use(express.static("public"));
+    app.use(express.static(path.join(__dirname, "public")));
 
 //-----DB-----//
 
