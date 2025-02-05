@@ -22,7 +22,9 @@ router.get("/", (req, res) => {
             console.log("Erro ao listar registros --> " + erro);
             res.redirect("/");
         })    
-    });
+    }).catch((erro) => {
+        console.log("Erro --> " + erro)
+    })
     
 })
 
