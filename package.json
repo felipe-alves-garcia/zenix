@@ -2,10 +2,10 @@
   "name": "zenix",
   "version": "1.0.0",
   "description": "Planilhas",
-  "main": "bin/server.js",
+  "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "node bin/server.js"
+    "start": "nodemon bin/server.js"
   },
   "keywords": [
     "planilha",
