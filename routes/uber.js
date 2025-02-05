@@ -13,15 +13,17 @@ router.get("/data/:up", (req, res) => {
     res.redirect("/uber")
 })
 
-router.get("/", async (req, res) => {
-    const data = await uber.getData().then();
-    uber.findAll(data).then( async (resp) => {
-        const total = await uber.findAllTotal(data);
-        res.render("uber/home", {registros:resp, data:data, total:total});
-    }).catch((erro) => {
-        console.log("Erro ao listar registros --> " + erro);
-        res.redirect("/");
-    })
+router.get("/", (req, res) => {
+    uber.getData().then((data) => {
+        uber.findAll(data).then( async (resp) => {
+            const total = await uber.findAllTotal(data);
+            res.render("uber/home", {registros:resp, data:data, total:total});
+        }).catch((erro) => {
+            console.log("Erro ao listar registros --> " + erro);
+            res.redirect("/");
+        })    
+    });
+    
 })
 
 router.get("/add", (req, res) => {
