@@ -3,7 +3,7 @@ const { BackupUber } = require("../models/Uber");
 const { Data } = require("../models/Uber");
 
 async function getData(){
-    var data = await Data.findOne().lean();
+    var data = Data.findOne().lean();
     if(data == null){
         data = new Data({
             mes:1,
@@ -12,7 +12,7 @@ async function getData(){
         data.save().then((resp) => {
             return data;
         }).catch((erro) => {
-            console.log("Erro")
+            console.log("Erro --> " + erro);
         })
     }
     return data;
