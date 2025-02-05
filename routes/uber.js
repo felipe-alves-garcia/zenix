@@ -14,7 +14,9 @@ router.get("/data/:up", (req, res) => {
 })
 
 router.get("/", (req, res) => {
+    console.log("1")
     uber.getData().then((data) => {
+        console.log("2")
         uber.findAll(data).then( async (resp) => {
             const total = await uber.findAllTotal(data);
             res.render("uber/home", {registros:resp, data:data, total:total});
@@ -24,6 +26,7 @@ router.get("/", (req, res) => {
         })    
     }).catch((erro) => {
         console.log("Erro --> " + erro)
+        res.redirect("/")
     })
     
 })
